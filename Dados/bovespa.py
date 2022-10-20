@@ -2,6 +2,10 @@
 Intro the pandas libary
 '''
 
+#NaaN = sao valores nulos
+#mean() = media
+#sum() = soma
+
 #importando a biblioteca panda
 import pandas as pd
 
@@ -20,4 +24,16 @@ ulitmas_linhas = df.tail(5)
 #retorna estatísticas dos dados
 descricao = df.describe()
 
-print(colunas)
+#retorna apenas os valores unicos
+razao = df["Razao Social"].unique()
+segmento = df["Segmento"].unique()
+codigo = df["Codigo"].unique()
+fundo = df["Fundo"].unique()
+
+#fazer um filtro utilizando o loc
+filtro = df.loc[df["Segmento"] == "CYCR"] 
+
+#GroupBy
+grupo = df.groupby("Razao Social")["Segmento"].nunique
+
+print(filtro)
