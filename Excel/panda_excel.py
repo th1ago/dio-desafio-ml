@@ -33,3 +33,14 @@ df.dropna(subset=["Vendas"], inplace=True)
 df.dropna(how="all", inplace=True)
 
 print(df.head())
+
+#Criando nova coluna de receita
+#criando coluna Receita
+#mul() - multiplicacao
+df["Receita"] = df["Vendas"].mul(df["Qtde"])
+
+#Retornando a maior receita
+df["Receita"].max()
+
+#Retornando a maenor receita
+df["Receita"].min()
