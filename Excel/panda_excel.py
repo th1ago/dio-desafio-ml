@@ -44,3 +44,16 @@ df["Receita"].max()
 
 #Retornando a maenor receita
 df["Receita"].min()
+
+#Retorna o Top3 da coluna Receita
+df.nlargest(3, "Receita")
+
+#Retorna as 3 piores da coluna Receitas
+df.nsmallest(3, "Receita")
+
+#Agrupamento por cidade
+df.groupby("Cidade")["Receita"].sum()
+
+#Ordenando o conjunto de dados
+#ascending - do maior para o menor
+df.sort_values("Receita", ascending=False).head(10)
