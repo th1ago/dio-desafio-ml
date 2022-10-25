@@ -8,7 +8,7 @@ df4 = pd.read_excel("Excel\datasets\Natala.xlsx", engine="openpyxl")
 df5 = pd.read_excel("Excel\datasets\Salvador.xlsx", engine="openpyxl")
 
 #juntando os arquivos
-df = pd.concat([df1, df2])
+df = pd.concat([df1, df2, df3, df4, df5])
 
 #alterando o tipo de dado da coluna LojaID
 df["LojaId"] = df["LojaID"].astype("object")
@@ -17,12 +17,19 @@ df["LojaId"] = df["LojaID"].astype("object")
 df.isnull().sum()
 
 #substituindo linhas com valores faltantes
+#mean() - media
 linhas_faltantes = df["Vendas"].fillna(df["Vendas"].mean(), inplace=True)
 
 #substituindo os valores nulos por zero
-substituido_zero = df["Vendas"].fillna(0, inplace=True)
+substituindo_zero = df["Vendas"].fillna(0, inplace=True)
 
 #apagando as linhas com valores nulos
 nulos = df.dropna(inplace=True)
 
-print(df2.head())
+#apagando as linhas com valores nulos com base em 1 coluna
+df.dropna(subset=["Vendas"], inplace=True)
+
+#removendo linhas que estejam com valores faltantes em todas as colunas
+df.dropna(how="all", inplace=True)
+
+print(df.head())
