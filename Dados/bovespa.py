@@ -10,7 +10,7 @@ Intro the pandas libary
 import pandas as pd
 
 #ignora linhas com erros - error_bad_lines=True
-df = pd.read_csv("C:\\Users\\Thiago\\Documents\\Projetos\\dio-desafio-ml\\Dados\\listadosFundos.csv", encoding="latin-1", sep=';')
+df = pd.read_csv("Dados\listadosFundos.csv", encoding="latin-1", sep=';')
 
 #total de linhas e colunas
 linhas = df.shape
@@ -36,4 +36,4 @@ filtro = df.loc[df["Segmento"] == "CYCR"]
 #GroupBy
 grupo = df.groupby("Razao Social")["Segmento"].nunique
 
-print(filtro)
+print(razao)
