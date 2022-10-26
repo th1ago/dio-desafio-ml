@@ -71,3 +71,7 @@ df.dtypes
 
 #transformando coluna de date em date
 df["Data"] = pd.to_datetime(df["Data"])
+
+#criando uma coluna por ano
+#dt = DATETIME
+df["Ano_Venda"] = df["Data"].dt.year
