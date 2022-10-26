@@ -34,8 +34,10 @@ df.dropna(how="all", inplace=True)
 
 print(df.head())
 
-#Criando nova coluna de receita
-#criando coluna Receita
+'''
+Trabalhando com colunas=
+'''
+#criando um nova coluna Receita
 #mul() - multiplicacao
 df["Receita"] = df["Vendas"].mul(df["Qtde"])
 
@@ -57,3 +59,15 @@ df.groupby("Cidade")["Receita"].sum()
 #Ordenando o conjunto de dados
 #ascending - do maior para o menor
 df.sort_values("Receita", ascending=False).head(10)
+
+'''
+Trabalhando com datas
+'''
+#transformando a coluna de date em tipo inteiro
+df["Data"] = df["Data"].astype("int64")
+
+#verificando o tipo de dado dde cada coluna
+df.dtypes
+
+#transformando coluna de date em date
+df["Data"] = pd.to_datetime(df["Data"])
