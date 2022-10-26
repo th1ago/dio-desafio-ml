@@ -75,3 +75,13 @@ df["Data"] = pd.to_datetime(df["Data"])
 #criando uma coluna por ano
 #dt = DATETIME
 df["Ano_Venda"] = df["Data"].dt.year
+
+'''
+Visualizando de dados
+'''
+#value_counts realiza uma contagem 
+#significa que a loja X realizou X vendas
+df["LojaID"].value_counts(ascending=False)
+
+#grafico de barras
+df["LojaID"].value_counts(ascending=False).plot.bar()
