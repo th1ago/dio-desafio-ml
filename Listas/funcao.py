@@ -32,11 +32,5 @@ def exibir_poema(data_extenso, *args, **kwargs):
     print(mensagem)
 
 
-exibir_poema(
-    "Sexta, 1 de janeiro 1222"
-    "Zen of Python",
-    "Namespaces are one honking great idea -- let's do more of those!",
-    autor="Tim Peters",
-    ano=1999,
-)
+exibir_poema("Sexta, 1 de janeiro 1222", "Zen of Python", autor="Tim Peters", ano=1999,)
 
