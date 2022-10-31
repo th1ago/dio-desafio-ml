@@ -1,6 +1,6 @@
 class bike:
     #self uma referencia para o objeto, argumento
-    #essa 'e a instancia do objeto que foi passado
+    #atributo da a instancia do objeto que foi passado
     def __init__ (self, cor, modelo, ano, valor):
         self.cor = cor
         self.modelo = modelo
