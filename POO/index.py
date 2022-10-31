@@ -16,7 +16,9 @@ class bike:
     def correr(self):
         print("run")
 
+    #representacao de classe
+    def __str__(self):
+        return f"{self.__class__.__name__}: {', '.join([f'{chave}={valor}' for chave, valor in self.__dict__.items()])}"
+
 b1 = bike("Vermelha", "caloi", 2022, 300)
-b1.buzinar()
-b1.parar()
-b1.correr()
+print(b1)
