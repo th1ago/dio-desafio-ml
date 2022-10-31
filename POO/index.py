@@ -17,4 +17,6 @@ class bike:
         print("run")
 
 b1 = bike("Vermelha", "caloi", 2022, 300)
-print(b1)
+b1.buzinar()
+b1.parar()
+b1.correr()
