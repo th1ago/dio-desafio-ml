@@ -8,8 +8,14 @@ class Estudante:
     def __str__(self) -> str:
         return f"{self.nome} - {self.matricula} - {self.escola}"
 
+def mostrar_valores(*objs):
+    for obj in objs:
+        print(obj)
+
 aluno1 = Estudante("Thiago", 1)
 aluno2 = Estudante("Taigo", 2)
+mostrar_valores(aluno1, aluno2)
 
-print(aluno1)
-print(aluno2)
+Estudante.escola = "Python Unimed"
+aluno1.matricula = 3
+mostrar_valores(aluno1, aluno2)
