@@ -10,5 +10,8 @@ Ciência de Dados
 - `Lists:` [ ] - ordenados, mutável, permite valores duplicados
 - `Tuples:` ( ) - ordenados, imutável, permite valores duplicados
 - `Dicionarios:` { } - ordenados, mutável, não permite valores duplicados
+- `Interface:` definem o que uma classe deve fazer e nao como.
+
+### Param em Func
 - `Funcao_1:` quando informar o param *args == tupla 
 - `Funcao_2:` quando informar o param **kwargs == dicionario
