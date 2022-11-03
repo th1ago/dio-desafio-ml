@@ -14,6 +14,12 @@ class Pessoa:
     def criar_data_born(cls, ano, mes, dia, nome):
         idade = 2022 - ano
         return cls(nome, idade)
+    
+    # nao precisa de contexto de classe 
+    # e nem da instancia do objeto
+    @staticmethod
+    def maior_idade(idade):
+        return idade >= 18
 
 p = Pessoa.criar_data_born(1988, 1, 1, "Thiago")
 print(p)
