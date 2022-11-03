@@ -1,3 +1,9 @@
+'''
+Atributod de classe e de instancia
+Variaveis de instancia 'e unica POR objeto, cada objeto possui uma copia
+Variaveis de classe 'e uniaca PARA todo objeto
+'''
+
 class Estudante:
     escola = "DIO"
 
