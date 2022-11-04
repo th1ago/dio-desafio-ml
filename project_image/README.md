@@ -2,7 +2,9 @@
 
 Description. 
 The package package_name is used to:
-	- I don1t yet
+	- Histrogram matching
+    - Structural similarity
+    - Resize image
 
 ## Installation
 
