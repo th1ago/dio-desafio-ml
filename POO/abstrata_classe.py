@@ -15,6 +15,9 @@ class ControleRemoto():
     def desligar(self):
         pass
 
+    def marca(self):
+        pass
+
 class ControleTV(ControleRemoto):
     def ligar(self):
         print("Ligando TV")
